@@ -7,7 +7,6 @@ function TodoForm(props) {
         setInput(e.target.value);
     }
 
-
     // handleSubmit function
     const handleSubmit = e =>{
         e.preventDefault();
@@ -15,20 +14,11 @@ function TodoForm(props) {
         props.onSubmit({
             id: Math.floor(Math.random() *10),
             text: input
-        })
+        });
+        setInput('')
         
 
     }
-
-
-
-
-
-
-
-
-
-
 
   return (
     <form className='todo-form' onSubmit={handleSubmit}>
